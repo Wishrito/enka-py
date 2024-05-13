@@ -35,3 +35,6 @@ await client.start()
 await client.fetch_showcase(809162009)
 await client.stop()
 ```
+
+# Examples
+You can find more detailed examples in the `/examples` folder.
