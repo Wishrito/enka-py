@@ -1,0 +1,3 @@
+enka-py relies on several game assets to fill-in things like weapon names, stats icons, etc. that are not provided by the API.  
+To speed up the process, these game assets are downloaded when you first use the client and are stored locally on your machine.  
+enka-py doesn't know when the local assets are outdated, therefore you'd need to update them when necessary. How to handle this process is up to you, I personally just run it once every single day in the morning.
