@@ -27,3 +27,11 @@ async with enka.HSRClient() as client:
     await client.fetch_showcase(809162009)
 ```
 Same as `GenshinClient`, you can also call the `start` and `close` methods manually.
+```py
+import enka
+
+client = enka.HSRClient()
+await client.start()
+await client.fetch_showcase(809162009)
+await client.stop()
+```
