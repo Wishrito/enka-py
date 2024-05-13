@@ -13,7 +13,7 @@ async with enka.GenshinClient(enka.gi.Language.RUSSIAN) as client:
 async with enka.HSRClient(enka.hsr.Language.THAI) as client:
     ...
 
-# Or
+# Or with str
 async with enka.GenshinClient("ru") as client:
     ...
 
