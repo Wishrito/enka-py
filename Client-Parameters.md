@@ -6,11 +6,20 @@ Changes the language of contents returned by the wrapper, such as weapon names, 
 ```py
 import enka
 
+# With enum
 async with enka.GenshinClient(enka.gi.Language.RUSSIAN) as client:
     ...
 
 async with enka.HSRClient(enka.hsr.Language.THAI) as client:
     ...
+
+# Or
+async with enka.GenshinClient("ru") as client:
+    ...
+
+async with enka.HSRClient("th") as client:
+    ...
+
 ```
 
 ## Headers
