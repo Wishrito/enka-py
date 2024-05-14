@@ -1,4 +1,4 @@
-## Starting and Closing the Client Properly
+# Starting and Closing the Client Properly
 **Remember** to call `start` and `close` or use the `async with` syntax!
 ```py
 import enka
@@ -13,7 +13,7 @@ await client.start()
 await client.close()
 ```
 
-## Finding Model's Attributes
+# Finding Model's Attributes
 If you're using an IDE like pycharm or VSCode, you can `alt + left click` on a variable and it will lead you the source code of the wrapper, from there you can see the model's docstring.
 ```py
 class Artifact(BaseModel):
@@ -36,7 +36,7 @@ class Artifact(BaseModel):
     """
 ```
 
-## Catching exceptions
+# Catching exceptions
 
 All exception classes can be found in [enka/errors.py](https://github.com/seriaati/enka-py/blob/main/enka/errors.py), Catch them with `try-except`.
 ```py
