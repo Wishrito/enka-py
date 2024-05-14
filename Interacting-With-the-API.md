@@ -70,4 +70,4 @@ await client.stop()
 ```
 
 # Examples
-You can find more detailed examples in the `/examples` folder.
+You can find more detailed examples in the [/examples](https://github.com/seriaati/enka-py/tree/main/examples) folder.
