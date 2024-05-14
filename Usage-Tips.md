@@ -38,7 +38,7 @@ class Artifact(BaseModel):
 
 ## Catching exceptions
 
-All exception classes can be found in [enka/errors.py](https://github.com/seriaati/enka-py/blob/460f9984fb2384caa012f3c394b224f6b9f58bb9/enka/errors.py), Catch them with `try-except`.
+All exception classes can be found in [enka/errors.py](https://github.com/seriaati/enka-py/blob/main/enka/errors.py), Catch them with `try-except`.
 ```py
 import enka
 
