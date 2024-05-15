@@ -69,5 +69,22 @@ await client.fetch_showcase(809162009)
 await client.stop()
 ```
 
+# Fetching Character Builds
+*Available after v2.1.0*  
+  
+For information on what character builds are, please read the [Enka Network API docs](https://api.enka.network/#/api?id=profile-endpoints).  
+`client.fetch_builds` returns a dictionary of character ID to list of builds that belong to the character, builds is a list of `Build` models.
+```py
+import enka
+
+async with enka.GenshinClient() as client:
+    showcase = await client.fetch_showcase(618285856)
+    await client.fetch_builds(showcase.owner)
+
+async with enka.HSRClient() as client:
+    showcase = await client.fetch_showcase(809162009)
+    await client.fetch_builds(showcase.owner)
+```
+
 # Examples
 You can find more detailed examples in the [examples](https://github.com/seriaati/enka-py/tree/main/examples) folder.
