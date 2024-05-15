@@ -79,11 +79,13 @@ import enka
 
 async with enka.GenshinClient() as client:
     showcase = await client.fetch_showcase(618285856)
-    await client.fetch_builds(showcase.owner)
+    builds = await client.fetch_builds(showcase.owner)
+    
+    for character_id, build in builds.items():
+        print(character_id)
+        print(build.name, build.character.name)
 
-async with enka.HSRClient() as client:
-    showcase = await client.fetch_showcase(809162009)
-    await client.fetch_builds(showcase.owner)
+# Same goes for HSRClient
 ```
 
 # Examples
