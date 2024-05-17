@@ -88,5 +88,19 @@ async with enka.GenshinClient() as client:
 # Same goes for HSRClient
 ```
 
+# Fetching and Parsing raw Data
+*Available after v2.1.1*  
+  
+You can let the API wrapper return the raw data from the API, and later on parse it.
+```py
+import enka
+
+async with enka.GenshinClient() as client:
+    raw = await client.fetch_showcase(901211014, raw=True)
+    parsed = client.parse_showcase(raw)
+
+# Same goes for HSRClient
+```
+
 # Examples
 You can find more detailed examples in the [examples](https://github.com/seriaati/enka-py/tree/main/examples) folder.
