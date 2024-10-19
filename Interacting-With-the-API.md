@@ -13,10 +13,10 @@ import enka
 client = enka.GenshinClient()
 await client.start()
 await client.fetch_showcase(901211014)
-await client.stop()
+await client.close()
 ```
 > [!IMPORTANT]  
-> When using the client, you **must** use either the `async with` syntax or call `start` and `stop` manually; otherwise, the client won't work and `RuntimeError` will be raised.
+> When using the client, you **must** use either the `async with` syntax or call `start` and `close` manually; otherwise, the client won't work and `RuntimeError` will be raised.
 
 ## Namecards and icons
 *Available after v1.2.0*  
