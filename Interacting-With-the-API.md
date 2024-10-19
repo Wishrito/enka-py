@@ -66,7 +66,7 @@ import enka
 client = enka.HSRClient()
 await client.start()
 await client.fetch_showcase(809162009)
-await client.stop()
+await client.close()
 ```
 
 # Fetching Character Builds
