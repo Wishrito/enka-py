@@ -33,13 +33,17 @@ async with enka.GenshinClient(headers={"User-Agent": "MyDiscordBot-1.0"}) as cli
 # Same goes for HSRClient
 ```
 
-## Cache TTL
-The time to live (ttl) in seconds for the internal cache to be evicted, the default is 60 seconds, which is the minimum refresh time in Enka Network. Increasing this value might result in inconsistency between the data returned by the wrapper and the live data.
+## Cache
+*Added in v2.3.0*  
+  
+Caching is not enabled by default, passing in any subclass of `enka.cache.BaseTTLCache` will enable caching.  
+See [`example/cache.py`](https://github.com/seriaati/enka-py/blob/main/examples/cache.py) on how to enable memory caching and sqlite caching.
 ```py
 import enka
 
-async with enka.GenshinClient(cache_ttl=30) as client:
+async with enka.GenshinClient(cache=enka.cache.SQLiteCache()) as client:
    ...
 
 # Same goes for HSRClient
 ```
+You can add your own implementation of caching (e.g. Redis) by subclassing `enka.cache.BaseTTLCache` and implementing all the abstract methods.
